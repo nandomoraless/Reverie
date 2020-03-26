@@ -1,0 +1,68 @@
+// Sizes - Mobile First
+
+$base-font-size: 20px;
+$font-scale:4;
+
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size: $base-font-size + $font-scale * (6 - $i);
+        line-height: 1.2em;
+        margin-bottom: $grid__gap;
+    }
+}
+
+
+
+h1,
+h2,
+h3 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+
+
+}
+
+h4,
+h5,
+h6 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: Normal;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: $grid__gap;
+
+}
+
+p::before {
+    content: "";
+    display: block;
+    margin-bottom: 10px;
+    width: 20%;
+    background-color: white;
+    border-bottom: 3px solid white;
+}
+
+
+
+// Sizes Tablet and Larger
+
+@media only screen and (min-width: $bp-medium) {
+
+    $base-font-size: 20px;
+    $font-scale: 14;
+
+
+    @for $i from 1 through 6 {
+        h#{$i} {
+            font-size: $base-font-size + $font-scale * (6 - $i);
+            line-height: 1.2em;
+
+
+        }
+    }
+}

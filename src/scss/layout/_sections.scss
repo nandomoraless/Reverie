@@ -1,0 +1,42 @@
+// Section Styles
+.wrapper {
+    max-width: 1300px;
+
+}
+
+.intro {
+    background: linear-gradient($color-dark-teal, $color-teal);
+
+    color: white;
+
+    .grid__item--intro {
+        grid-column: 2 / span 2;
+
+    }
+
+}
+
+.about {
+    background-color: $color-brand-black;
+    color: white;
+
+    .grid__item--about {
+        grid-column: span 2;
+
+    }
+
+    p {
+        grid-column: span 3;
+        grid-row: 2
+    }
+}
+
+
+// Grids - Mobile First
+
+.grid__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: $grid__gap;
+    padding: 4em $grid__gap;
+}
