@@ -22,7 +22,9 @@ function style() {
         .pipe(browserSync.stream());
 }
 
-
+function concat( ){
+    
+}
 
 function watch() {
     browserSync.init({

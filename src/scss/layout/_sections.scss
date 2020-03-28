@@ -1,8 +1,35 @@
+// Grids - Mobile First
+
+.grid__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: $grid__gap;
+    padding: 4em $grid__gap;
+}
+
+
+.card-container--grid {
+    // Grid placement within .grid__section
+    grid-row: 2;
+
+    // Styling for hortizontal cards
+    display: grid;
+    grid-template-columns: repeat(8, calc(50% - 40px));
+    grid-template-rows: minmax(150px, 1fr);
+    grid-gap: $grid__gap;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    padding: 0 20px;
+
+}
+
 // Section Styles
 .wrapper {
     max-width: 1300px;
 
 }
+
+// Introduction
 
 .intro {
     background: linear-gradient($color-dark-teal, $color-teal);
@@ -15,6 +42,8 @@
     }
 
 }
+
+// About Section
 
 .about {
     background-color: $color-brand-black;
@@ -31,12 +60,34 @@
     }
 }
 
-
-// Grids - Mobile First
-
-.grid__section {
+// Headliners
+.headliners {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: $grid__gap;
     padding: 4em $grid__gap;
+
+    background: linear-gradient($color-dark-teal 75%, $color-teal);
+
+}
+
+.card {
+    grid-column: span 2;
+}
+
+/* Artist Title should be 100% on mobile and max-content on desktop */
+.artist--Title {
+    background-color: $color-green;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+
+}
+
+.p--fuschia {
+    text-align: justify;
+}
+
+.p--fuschia::before {
+    border-bottom: 3px solid $color-fuschia;
+    width: 10%;
 }

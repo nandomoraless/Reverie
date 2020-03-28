@@ -1,3 +1,7 @@
+body {
+    color: white;
+}
+
 // Sizes - Mobile First
 
 $base-font-size: 20px;
@@ -31,7 +35,7 @@ h6 {
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 1em;
     line-height: 1.5em;
     margin-bottom: $grid__gap;
@@ -43,8 +47,16 @@ p::before {
     display: block;
     margin-bottom: 10px;
     width: 20%;
-    background-color: white;
     border-bottom: 3px solid white;
+}
+
+
+
+.overline {
+    font-family: 'Archivo', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
 }
 
 
