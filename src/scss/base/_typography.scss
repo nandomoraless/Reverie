@@ -63,7 +63,7 @@ p::before {
 
 // Sizes Tablet and Larger
 
-@media only screen and (min-width: $bp-medium) {
+@include for-tablet-landscape-up {
 
     $base-font-size: 20px;
     $font-scale: 14;

@@ -8,7 +8,7 @@
 }
 
 
-.card-container--grid {
+.card-container__grid {
     // Grid placement within .grid__section
     grid-row: 2;
 
@@ -19,7 +19,6 @@
     grid-gap: $grid__gap;
     overflow-x: scroll;
     scroll-snap-type: x proximity;
-    padding: 0 20px;
 
 }
 
@@ -62,25 +61,29 @@
 
 // Headliners
 .headliners {
-    display: grid;
-    gap: $grid__gap;
     padding: 4em $grid__gap;
-
-    background: linear-gradient($color-dark-teal 75%, $color-teal);
+    background: $color-dark-teal;
 
 }
 
 .card {
     grid-column: span 2;
+
+
 }
 
 /* Artist Title should be 100% on mobile and max-content on desktop */
-.artist--Title {
+.artist__title {
     background-color: $color-green;
     width: 100%;
     text-align: center;
     padding: 5px 0;
 
+}
+
+.artist__image {
+    width: 100%;
+    padding-bottom: $grid__gap;
 }
 
 .p--fuschia {
@@ -90,4 +93,65 @@
 .p--fuschia::before {
     border-bottom: 3px solid $color-fuschia;
     width: 10%;
+}
+
+
+
+// Schedule
+
+.schedule {
+    background: linear-gradient($color-dark-teal, $color-teal);
+
+    p {
+        grid-column: span 4;
+        padding-bottom: $section-gutter;
+    }
+
+    h3 {
+        grid-column: span 4;
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+
+    h3::after {
+
+        content: "";
+        flex-direction: row;
+        position: absolute;
+        width: 50%;
+        margin-left: $grid__gap;
+        border-bottom: 3px solid $color-teal;
+
+    }
+}
+
+/* Tabs for jQuery */
+#tabs__day {
+    display: flex;
+    grid-column: span 4;
+    justify-content: space-evenly;
+
+    li>a {
+        display: block;
+        font-family: 'Comfortaa', cursive;
+        font-size: 1.5em;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+
+    }
+
+    li>a:hover {
+        color: $color-green;
+
+    }
+}
+
+.tabs__container {
+    grid-column: span 4;
+}
+
+.tabs__card {
+    display: flex;
+
 }
