@@ -1,0 +1,43 @@
+// Footer
+footer {
+    background-color: $color-brand-black;
+
+    h6 {
+        grid-column: span 4;
+    }
+
+}
+
+.social-media {
+    display: flex;
+    grid-column: span 4;
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+}
+
+.fa {
+    vertical-align: bottom;
+    padding: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 2px;
+
+
+
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-instagram,
+.fa-youtube,
+.fa-snapchat-ghost,
+.fa-vimeo,
+.fa-rss {
+    background: $color-green;
+    color: white;
+
+}

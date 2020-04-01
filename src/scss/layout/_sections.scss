@@ -12,7 +12,7 @@
     // Grid placement within .grid__section
     grid-row: 2;
 
-    // Styling for hortizontal cards
+    // Grid for hortizontal cards
     display: grid;
     grid-template-columns: repeat(8, calc(50% - 40px));
     grid-template-rows: minmax(150px, 1fr);
@@ -25,20 +25,6 @@
 // Section Styles
 .wrapper {
     max-width: 1300px;
-
-}
-
-// Introduction
-
-.intro {
-    background: linear-gradient($color-dark-teal, $color-teal);
-
-    color: white;
-
-    .grid__item--intro {
-        grid-column: 2 / span 2;
-
-    }
 
 }
 
@@ -63,11 +49,13 @@
 .headliners {
     padding: 4em $grid__gap;
     background: $color-dark-teal;
+    scroll-snap-type: x mandatory;
 
 }
 
 .card {
     grid-column: span 2;
+    scroll-snap-align: center;
 
 
 }
@@ -107,13 +95,13 @@
         padding-bottom: $section-gutter;
     }
 
-    h3 {
+    >h3 {
         grid-column: span 4;
         text-transform: uppercase;
         font-size: 1em;
     }
 
-    h3::after {
+    >h3::after {
 
         content: "";
         flex-direction: row;
@@ -130,28 +118,99 @@
     display: flex;
     grid-column: span 4;
     justify-content: space-evenly;
+    margin-bottom: $grid__gap;
 
-    li>a {
+    >li>a {
         display: block;
         font-family: 'Comfortaa', cursive;
         font-size: 1.5em;
         text-decoration: none;
         color: white;
         cursor: pointer;
-
-    }
-
-    li>a:hover {
-        color: $color-green;
-
     }
 }
 
 .tabs__container {
     grid-column: span 4;
+
+
+
 }
 
 .tabs__card {
-    display: flex;
 
+    display: flex;
+    background-color: black;
+    margin-bottom: $grid__gap;
+
+    .tabs__card--time {
+        @extend h4;
+        margin: 0;
+        padding: 0.5em;
+        border-left: 2px solid $color-fuschia;
+
+    }
+
+    .tabs__info {
+        border-left: 2px solid $color-fuschia;
+        width: 100%;
+
+        .tabs__venue {
+            display: block;
+            font-family: 'archivo', sans-serif;
+            font-size: 1em;
+            background-color: $color-dark-teal;
+            margin: 0;
+            padding: 2px 0 2px $grid__gap;
+
+        }
+
+        .tabs__artist {
+
+            margin: 0;
+            padding: 5px 0 5px $grid__gap;
+            font-size: 1.602em;
+
+
+
+        }
+    }
+
+
+}
+
+// Newsletter
+
+.signup {
+    background-color: $color-light-grey;
+
+    >h2 {
+        grid-column: span 3;
+        color: $color-brand-black;
+    }
+
+    >form {
+        grid-row: 2;
+        grid-column: span 4;
+
+        div {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        label {
+            @extend .overline;
+            color: $color-brand-black
+        }
+    }
+}
+
+
+#newsletter {
+
+    border: 0;
+    font-size: 1em;
+    vertical-align: middle;
+    background: none;
+    border-bottom: 3px solid $color-fuschia;
 }

@@ -5,6 +5,7 @@ const postcss = require('gulp-postcss');
 const cssnano = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
 
 function style() {
     return gulp.src('./src/scss/**/*.scss')
@@ -22,21 +23,26 @@ function style() {
         .pipe(browserSync.stream());
 }
 
-function concat( ){
-    
-}
+gulp.task('concat', function () {
+    return gulp.src('./src/**/*.js')
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest('dist/js'));
+
+});
 
 function watch() {
     browserSync.init({
         server: {
-            baseDir: './dist'
+            baseDir: 'dist'
         }
     });
     gulp.watch('./src/scss/**/*.scss', style);
+    gulp.watch('./js/**/*.js').on('change', browserSync.reload);
     gulp.watch('./dist/*.html').on('change', browserSync.reload);
-    gulp.watch('./src/js/*.js').on('change', browserSync.reload);
 
 }
+
+
 
 exports.style = style;
 exports.watch = watch;

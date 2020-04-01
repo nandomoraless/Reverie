@@ -36,3 +36,15 @@
     border: 2px solid orange;
 
 }
+
+// Newsletter Sign Up Button 
+.button--submit {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    border: 1px solid $color-fuschia;
+    color: white;
+    background: $color-fuschia;
+    cursor: pointer;
+
+}

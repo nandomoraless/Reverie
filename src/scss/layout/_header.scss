@@ -1,0 +1,13 @@
+// Introduction
+
+.intro {
+    background: linear-gradient($color-dark-teal, $color-teal);
+
+    color: white;
+
+    .grid__item--intro {
+        grid-column: 2 / span 2;
+
+    }
+
+}
