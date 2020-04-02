@@ -19,14 +19,20 @@ $(function () {
         }
     });
 });
-// Newsletter 
+// Hamburger Menu
+$(document).ready(function () {
+    $(".menu").click(function () {
+        $(".menu").toggleClass("active");
+        $(".navbar-menu").toggleClass("active");
 
-document.onkeydown = function (e) {
-    if (e.keyCode === 13) { // The Enter/Return key
-        document.button.click();
+    });
+    $('.menu-listing li a').on("click", function () {
+        $(".menu").removeClass('active');
+        $(".navbar-menu").removeClass('active');
+    });
+});
+// Tabs
 
-    }
-};
 $(document).ready(function () {
 
     $('#tabs__day li a:not(:first)').addClass('inactive');

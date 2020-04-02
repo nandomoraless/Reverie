@@ -1,3 +1,5 @@
+// Tabs
+
 $(document).ready(function () {
 
     $('#tabs__day li a:not(:first)').addClass('inactive');

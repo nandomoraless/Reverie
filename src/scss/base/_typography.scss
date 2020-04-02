@@ -59,11 +59,23 @@ p::before {
 
 }
 
+a {
+    color: white;
+    font-family: 'Archivo', sans-serif;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover:not(.fa, .fa-facebook) {
+    border-bottom: 2px solid $color-fuschia;
+    font-family: 'Archivo', sans-serif;
+}
+
 
 
 // Sizes Tablet and Larger
 
-@include for-tablet-landscape-up {
+@include for-desktop-up {
 
     $base-font-size: 20px;
     $font-scale: 14;
