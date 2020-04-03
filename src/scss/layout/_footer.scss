@@ -5,7 +5,7 @@ footer {
     div {
         >h6 {
             grid-column: span 4;
-            margin: 0;
+            margin-bottom: $grid__gap;
         }
 
         >h6:after {
@@ -19,10 +19,12 @@ footer {
 }
 
 
+.social {
+    grid-column: span 3;
+}
 
 .social-media {
     display: flex;
-    grid-column: span 4;
     justify-content: space-evenly;
 
     flex-wrap: wrap;
@@ -51,6 +53,12 @@ footer {
     // Facebooks div had to be reset
     height: 60px;
     width: 60px;
+}
+
+@include for-tablet-portrait-up {
+    .social {
+        grid-column: span 6;
+    }
 }
 
 @include for-tablet-landscape-up {
